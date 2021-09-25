@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
               ),
               itemBuilder: (context, idx) => ItemCart(
                 product: products[idx],
-                press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen()))
+                press: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen(product: products[idx])))
               )
             )
           ),
