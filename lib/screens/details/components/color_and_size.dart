@@ -55,6 +55,11 @@ class ColorDot extends StatelessWidget {
       height: 24.0,
       margin: EdgeInsets.only(right: kDefaultPadding / 2, top: kDefaultPadding / 4),
       padding: EdgeInsets.all(2.5),
+      decoration: BoxDecoration(
+        // shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(100),
+        border: Border.all(color: isSelected ? color : Colors.transparent)
+      ),
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: color,
