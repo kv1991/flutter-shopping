@@ -6,6 +6,7 @@ import 'product_title_with_image.dart';
 import 'color_and_size.dart';
 import 'description.dart';
 import 'counter_with_fav_btn.dart';
+import 'add_to_cart.dart';
 class Body extends StatelessWidget {
   final Product product;
   const Body({ Key key, this.product }) : super(key: key);
@@ -41,6 +42,7 @@ class Body extends StatelessWidget {
                       SizedBox(height: kDefaultPadding / 2),
                       CounterWithFavBtn(),
                       SizedBox(height: kDefaultPadding / 2),
+                      AddToCart(product: product)
                     ],
                   ),
                 ),
