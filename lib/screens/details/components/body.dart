@@ -4,7 +4,8 @@ import 'package:Shopping/models/Product.dart';
 import 'package:Shopping/constants.dart';
 import 'product_title_with_image.dart';
 import 'color_and_size.dart';
-
+import 'description.dart';
+import 'counter_with_fav_btn.dart';
 class Body extends StatelessWidget {
   final Product product;
   const Body({ Key key, this.product }) : super(key: key);
@@ -34,7 +35,12 @@ class Body extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget> [
-                      ColorAndSize(product: product)
+                      ColorAndSize(product: product),
+                      SizedBox(height: kDefaultPadding / 2),
+                      Description(product: product),
+                      SizedBox(height: kDefaultPadding / 2),
+                      CounterWithFavBtn(),
+                      SizedBox(height: kDefaultPadding / 2),
                     ],
                   ),
                 ),
